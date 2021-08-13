@@ -10,7 +10,7 @@ class Checkallcode extends Task
 {
 
     /** @var Config */
-    private $code, $type;
+    private $code, $type, $plugin;
 
     /**
      * Checkallcode constructor.
@@ -21,14 +21,6 @@ class Checkallcode extends Task
         $this->code = new Config(Server::getInstance()->getPluginManager()->getPlugin("Giftcode")->getDataFolder() . "code.yml", Config::YAML);
         $this->type = new Config(Server::getInstance()->getPluginManager()->getPlugin("Giftcode")->getDataFolder() . "type.yml", Config::YAML);
     }
-
-    /**
-     * Actions to execute when run
-     *
-     * @param $currentTick
-     *
-     * @return void
-     */
     public function onRun($currentTick)
     {
         $t = $this->code->getAll();
