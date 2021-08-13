@@ -35,7 +35,6 @@ class Checkallcode extends Task
         $ty = $this->type->getAll();
         foreach (array_keys($this->code->getAll()) as $code) {
             if (!isset($t[$code]) || (isset($t[$code]) && !isset($ty[$t[$code]["Type"]]))) {
-                echo "Code lỗi " . $code;
                 $this->code->remove($code);
                 $this->code->save();
             }
