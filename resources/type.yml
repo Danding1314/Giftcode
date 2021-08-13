@@ -1,0 +1,5 @@
+﻿---
+example:
+  #command
+  - "give {player} 57 64"
+...

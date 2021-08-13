@@ -1,0 +1,13 @@
+name: Giftcode
+main: TanToan\GiftCode\Main
+version: 1.0.0
+api: [3.0.0,4.0.0]
+description: GiftCode
+
+commands:
+  giftcode:
+    usage: "/giftcode"
+    description: Command help to give giftcode to players
+  mycode:
+    usage: "/mycode"
+    description:  Command help to receive giftcode
