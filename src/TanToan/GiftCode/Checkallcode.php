@@ -9,13 +9,8 @@ use pocketmine\utils\Config;
 class Checkallcode extends Task
 {
 
-    /** @var Config */
     private $code, $type, $plugin;
 
-    /**
-     * Checkallcode constructor.
-     * @param Main $plugin
-     */
     public function __construct(Main $plugin)
     {
         $this->code = new Config(Server::getInstance()->getPluginManager()->getPlugin("Giftcode")->getDataFolder() . "code.yml", Config::YAML);
